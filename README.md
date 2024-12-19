@@ -6,12 +6,14 @@ BookStore Project is a RESTful application developed in Java using the Spring Bo
 Book Management: Full CRUD operations for books, including details such as title, author, price, and description.
 Author Management: Allows registration and management of authors, enabling seamless association with corresponding books.
 User Management: Handles user registration and management with authentication and authorization for secure operations.
+
 🛠️ Technologies Used
 Java 17: Core programming language.
 Spring Boot 3: Framework for building modern and scalable applications.
 Spring Security: Module to implement authentication and authorization.
 PostgreSQL: Relational database for data storage.
 Swagger/OpenAPI: Interactive API documentation for easy integration and usage.
+
 🚀 How to Run
 Prerequisites:
 
