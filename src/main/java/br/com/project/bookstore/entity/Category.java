@@ -15,9 +15,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 public class Category implements Serializable {
-
-    private static final long serialVersionUID =1L;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -26,4 +23,11 @@ public class Category implements Serializable {
 
     @OneToMany(mappedBy = "category")
     private List<Books> books = new ArrayList<>();
+
+    public Category(Integer id, String name, String description){
+        super();
+        this.id = id;
+        this.name = name;
+        this.description = description;
+    }
 }

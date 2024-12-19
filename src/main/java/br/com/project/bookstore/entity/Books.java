@@ -1,6 +1,8 @@
 package br.com.project.bookstore.entity;
 
 import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,7 +17,6 @@ import lombok.Setter;
 public class Books implements Serializable{
 
     private static final long serialVersionUID = 1L;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -23,6 +24,7 @@ public class Books implements Serializable{
     private String author_name;
     private String text;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
